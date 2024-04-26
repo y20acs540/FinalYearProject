@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            background-image: url('/static/images/air_1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Additional styles for background customization */
+        }
+
+        .content-container {
+            padding: 50px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .result-container {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        .result-container h2 {
+            color: #03130d; /* Blue color for result titles */
+            font-size: 24px; /* Increase font size */
+            margin-bottom: 10px; /* Add spacing below titles */
+        }
+
+        .result-container p {
+            color: #333; /* Dark gray color for result text */
+            font-size: 18px; /* Increase font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="content-container text-center mt-5">
+                    <h1 class="mb-4">Air Quality Prediction</h1>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="result-container">
+                                <h2 class="card-title">AQI Value:</h2>
+                                <p class="card-text">{{ rounded_prediction }}</p>
+                            </div>
+                            
+                            <div class="result-container">
+                                <h2 class="card-title">Air Quality:</h2>
+                                <p class="card-text">{{ pred_qual }}</p>
+                            </div>
+                            <div class="result-container">
+                                <h2 class="card-title">Precautions To Be Followed:</h2>
+                                <p class="card-text">{{ sug_msg }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (optional, only if needed) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

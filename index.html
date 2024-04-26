@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textboxes</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Style adjustments */
+        body {
+            background-image: url('/static/images/air_1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Additional styles for background customization */
+        }
+        h2 {
+            padding-top: 20px;
+            text-align: center; /* Align the heading in the center */
+            font-family:'Times New Roman', Times, serif; /* Change font family */
+            color: white; /* Change font color */
+        }
+        .custom-form {
+            max-width: 600px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 20px; /* Add some padding */
+            background-color: rgba(255, 255, 255, 0.7); /* Light background color with opacity */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+        }
+    </style>
+</head>
+<body>
+    <h2>AIR QUALITY PREDICTION</h2><hr/>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form action="/submit" method="post" enctype="multipart/form-data" class="custom-form">
+                    <label for="city">Select a city:</label>
+                    <select id="city" name="city" required class="form-control">
+                        <option value="0">Ahmedabad</option>
+                        <option value="1">Aizawl</option>
+                        <option value="2">Amaravati</option>
+                        <option value="3">Amritsar</option>
+                        <option value="4">Bengaluru</option>
+                        <option value="5">Bhopal</option>
+                        <option value="6">Brajrajnagar</option>
+                        <option value="7">Chandigarh</option>
+                        <option value="8">Chennai</option>
+                        <option value="9">Coimbatore</option>
+                        <option value="10">Delhi</option>
+                        <option value="11">Ernakulam</option>
+                        <option value="12">Gurugram</option>
+                        <option value="13">Guwahati</option>
+                        <option value="14">Hyderabad</option>
+                        <option value="15">Jaipur</option>
+                        <option value="16">Jorapokhar</option>
+                        <option value="17">Kochi</option>
+                        <option value="18">Kolkata</option>
+                        <option value="19">Lucknow</option>
+                        <option value="20">Mumbai</option>
+                        <option value="21">Patna</option>
+                        <option value="22">Shillong</option>
+                        <option value="23">Talcher</option>
+                        <option value="24">Thiruvananthapuram</option>
+                        <option value="25">Visakhapatnam</option>
+                    </select><br>
+                    
+                    <label for="textbox1">PM2.5:</label>
+                    <input type="text" id="textbox1" name="textbox1" required class="form-control"><br>
+                    
+                    <label for="textbox2">PM10:</label>
+                    <input type="text" id="textbox2" name="textbox2" required class="form-control"><br>
+                    
+                    <label for="textbox3">NO:</label>
+                    <input type="text" id="textbox3" name="textbox3" required class="form-control"><br>
+                    
+                    <label for="textbox4">NO2:</label>
+                    <input type="text" id="textbox4" name="textbox4" required class="form-control"><br>
+                    
+                    <label for="textbox5">NOx:</label>
+                    <input type="text" id="textbox5" name="textbox5" required class="form-control"><br>
+                    
+                    <label for="textbox6">NH3:</label>
+                    <input type="text" id="textbox6" name="textbox6" required class="form-control"><br>
+                    
+                    <label for="textbox7">CO:</label>
+                    <input type="text" id="textbox7" name="textbox7" required class="form-control"><br>
+                    
+                    <label for="textbox8">SO2:</label>
+                    <input type="text" id="textbox8" name="textbox8" required class="form-control"><br>
+                    
+                    <label for="textbox9">O3:</label>
+                    <input type="text" id="textbox9" name="textbox9" required class="form-control"><br>
+                    
+                    <label for="textbox10">Benzene:</label>
+                    <input type="text" id="textbox10" name="textbox10" required class="form-control"><br>
+                    
+                    <label for="textbox11">Toluene:</label>
+                    <input type="text" id="textbox11" name="textbox11" required class="form-control"><br>
+                    
+                    <label for="textbox12">Xylene:</label>
+                    <input type="text" id="textbox12" name="textbox12" required class="form-control"><br>
+                    
+                    <label for="textbox13">Temperature:</label>
+                    <input type="text" id="textbox13" name="textbox13" required class="form-control"><br>
+                    
+                    <label for="textbox14">Humidity:</label>
+                    <input type="text" id="textbox14" name="textbox14" required class="form-control"><br>
+                    
+                    <label for="textbox15">Wind Speed:</label>
+                    <input type="text" id="textbox15" name="textbox15" required class="form-control"><br>
+                    
+                    <label for="textbox16">Pressure:</label>
+                    <input type="text" id="textbox16" name="textbox16" required class="form-control"><br>
+                    
+                    <input type="submit" value="Submit" class="btn btn-primary mt-3">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
